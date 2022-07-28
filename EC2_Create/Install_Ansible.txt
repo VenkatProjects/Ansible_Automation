@@ -1,0 +1,18 @@
+# Ansible Installaion
+
+sudo yum update -y
+
+sudo yum install epel-release
+
+sudo yum install ansible
+
+# If above command not working, Please create repository
+
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+yum install -y epel-release
+
+sudo yum install -y ansible
+
+
+
