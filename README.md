@@ -19,11 +19,11 @@ After running, We are getting below error. It says, boto needs to be installed.
 
 So we need to run the below command to install boto
 
-   sudo yum install -y python-pip
+   ### sudo yum install -y python-pip
 
 once installed pip,then run the below command to install boto & boto 3 version
 
-  sudo pip install boto boto3
+  ### sudo pip install boto boto3
 
 after everything installed, again we're facing issue. It says #### "Handlers were checked" which means
 
