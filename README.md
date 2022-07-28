@@ -7,7 +7,7 @@ We have written Ansible YAML file to create an EC2 instance
 
 Before Running the YAML file, need to be check syntax
 
-### ansible-playbook ec2_instance --syntax-check
+   ansible-playbook ec2_instance.yml --syntax-check
 
 ![syntax](https://user-images.githubusercontent.com/67817741/181302390-18d0f739-5605-4ab0-b550-8bb3b54b3163.PNG)
 
@@ -19,11 +19,11 @@ After running, We are getting below error. It says, boto needs to be installed.
 
 So we need to run the below command to install boto
 
-### sudo yum install -y python-pip
+   sudo yum install -y python-pip
 
 once installed pip,then run the below command to install boto & boto 3 version
 
-### sudo pip install boto boto3
+  sudo pip install boto boto3
 
 after everything installed, again we're facing issue. It says #### "Handlers were checked" which means
 
@@ -35,6 +35,10 @@ we need to provide Credentials details. Either you can add into YAML file or run
 ### export AWS_ACCESS_KEY="aws access key generated from AWS"
 
 ### export AWS_SECRET_ACCESS_KEY=" aws secret key generated from AWS"
+
+once everything added, run the below command 
+
+	ansible-playbook ec2_instance.yml
 
 Now we have successfully launched 
 
