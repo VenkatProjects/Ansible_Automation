@@ -7,7 +7,7 @@ We have written Ansible YAML file to create an EC2 instance
 
 Before Running the YAML file, need to be check syntax
 
-   ansible-playbook ec2_instance.yml --syntax-check
+   	ansible-playbook ec2_instance.yml --syntax-check
 
 ![syntax](https://user-images.githubusercontent.com/67817741/181302390-18d0f739-5605-4ab0-b550-8bb3b54b3163.PNG)
 
