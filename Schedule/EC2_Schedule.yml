@@ -1,0 +1,26 @@
+---
+- name: Schedule EC2 instance stop and start
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Stop EC2 instance
+      ec2:
+        instance_ids: "{{ instance_id }}"
+        state: stopped
+      register: ec2
+      when: "'22' in ansible_date_time.hour"
+
+    - name: Start EC2 instance
+      ec2:
+        instance_ids: "{{ instance_id }}"
+        state: started
+      register: ec2
+      when: "'10' in ansible_date_time.hour"
+
+    - name: Schedule the task using cron
+      cron:
+        name: "Stop and start EC2 instance"
+        minute: "0"
+        hour: "22,10"
+        job: "ansible-playbook stop_start_instance.yml"
+
